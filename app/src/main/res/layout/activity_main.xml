@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:columnCount="2"
+    android:rowCount="4">
+
+    <TextView
+        android:id="@+id/GasTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gasPrice"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_row="0"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation"/>
+
+    <TextView
+        android:id="@+id/priceGasSelectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation"/>
+
+    <SeekBar
+        android:id="@+id/gasSeekBar"
+        android:layout_gravity="fill_horizontal"
+        android:progress="15"
+        android:max="30"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/seekbar_height"
+        android:elevation="@dimen/elevation"/>
+
+    <TextView
+        android:id="@+id/ethanolTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ethanolPrice"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_row="2"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation"
+/>
+
+    <TextView
+        android:id="@+id/priceEthanolSelectedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation"/>
+
+    <SeekBar
+        android:id="@+id/ethanolSeekBar"
+        android:layout_gravity="fill_horizontal"
+        android:progress="15"
+        android:max="30"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/seekbar_height"
+        android:elevation="@dimen/elevation"/>
+
+
+
+
+
+</GridLayout>
