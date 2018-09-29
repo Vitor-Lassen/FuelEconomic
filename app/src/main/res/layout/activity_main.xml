@@ -88,5 +88,27 @@
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"/>
 
+    <TextView
+        android:id="@+id/TheBestChoiceSelectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/textview_padding"
+        android:elevation="@dimen/elevation"
+        android:layout_columnSpan="2"
+        android:layout_column="0"
+        android:layout_gravity="fill_horizontal"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/resutImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/Image_height"
+        android:layout_gravity="center"
+        android:layout_columnSpan="2"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/questionmark"
+
+        />
+
 
 </GridLayout>

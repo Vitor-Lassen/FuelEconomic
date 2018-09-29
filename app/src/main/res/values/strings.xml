@@ -3,4 +3,6 @@
     <string name="gasPrice">gas price per liter</string>
     <string name="ethanolPrice">Ethanol price per liter</string>
     <string name="bestChoice">The best choice is...</string>
+    <string name="gasoline">Gasoline</string>
+    <string name="ethanol">Ethanol</string>
 </resources>
