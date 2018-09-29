@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">燃料经济</string>
+    <string name="gasPrice">每升汽油价格</string>
+    <string name="ethanolPrice">每升乙醇价格</string>
+    <string name="bestChoice">最好的选择是......</string>
+</resources>

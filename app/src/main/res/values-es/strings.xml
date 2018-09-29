@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Combustible Económico</string>
+    <string name="gasPrice">precio del Gasolina por litro</string>
+    <string name="ethanolPrice">Precio del etanol por litro</string>
+    <string name="bestChoice">La mejor opción es ...</string>
+    <string name="gasoline">Gasolina</string>
+    <string name="ethanol">Etanol</string>
+</resources>

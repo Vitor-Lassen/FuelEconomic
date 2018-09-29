@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Economia de "</string>
+    <string name="gasPrice">Preço gasolina por litro</string>
+    <string name="ethanolPrice">Preço etanol por litro</string>
+    <string name="bestChoice">Melhor Opção é ...</string>
+    <string name="gasoline">Gasolina</string>
+    <string name="ethanol">Etanol</string>
+</resources>
