@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         String zeroFormatado = _currencyFormat.format(0);
         _priceEthanolSelectedTextView.setText(zeroFormatado);
         _priceGasSelectedTextView.setText(zeroFormatado);
-        _gasSeekBar.setOnSeekBarChangeListener(new SeekBarListener(_priceGasSelectedTextView,_costGasoline));
-        _ethanolSeekBar.setOnSeekBarChangeListener(new SeekBarListener(_priceEthanolSelectedTextView,_costEthanol));
+        _gasSeekBar.setOnSeekBarChangeListener(new SeekBarListener(_priceGasSelectedTextView));
+        _ethanolSeekBar.setOnSeekBarChangeListener(new SeekBarListener(_priceEthanolSelectedTextView));
 
     }
 
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private  Fuel calculateBestChoice(){
-        int gasoline = _gasSeekBar.getProgress();
-        int ethanol = _ethanolSeekBar.getProgress();
-        int result = gasoline - ethanol;
+        double gasoline = calculateValueForProgress( _gasSeekBar.getProgress());
+        double ethanol = calculateValueForProgress( _ethanolSeekBar.getProgress());
+        double result = ethanol / gasoline;
         if (result >= 0.7)
             return  Fuel.gasoline;
         return  Fuel.ethanol;
@@ -65,17 +65,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private double calculateValueForProgress(int progress){
+        return  progress /100.;
+    }
+
     private  class SeekBarListener implements SeekBar.OnSeekBarChangeListener {
         TextView _textView;
-        double _cost;
-        public SeekBarListener(TextView textView,double cost){
+        public SeekBarListener(TextView textView){
             _textView = textView;
-            _cost = cost;
         }
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-            _cost = progress * 0.05;
-            _textView.setText(_currencyFormat.format(_cost));
+
+            _textView.setText(_currencyFormat.format(calculateValueForProgress(progress)));
             Fuel bestFuel = calculateBestChoice();
             selectBestChoice(bestFuel);
 
